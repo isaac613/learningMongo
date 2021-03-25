@@ -1,19 +1,16 @@
-const { MongoClient } = require("mongodb");
-
-const URI =
-  "mongodb+srv://isaac613:<password>@cluster0.qc9as.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 const connection = async () => {
+  console.log(process.env);
   try {
-    const client = new MongoClient(URI, { useUnifiedTopology: true });
-    await client.connect();
-    console.log("success");
-
-    const db = client.db("cactusdb");
-    const collection = db.collection("emails");
-    collection.insertOne({ email: "example@gmail.com" });
-    client.close();
+    await mongoose.connect(process.env.MONGO_URI, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    });
+    console.log("successfully connected to Cluster0");
   } catch (error) {
     console.log(error);
   }
 };
+connection();

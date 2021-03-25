@@ -1,0 +1,25 @@
+{
+  "name": "learningmongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaac613/learningMongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaac613/learningMongo/issues"
+  },
+  "homepage": "https://github.com/isaac613/learningMongo#readme"
+}
